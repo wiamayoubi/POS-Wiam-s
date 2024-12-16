@@ -5,7 +5,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Allow stacking */
+    justify-content: space-between; /* Spread content */
     align-items: center;
     height: 100vh;
 }
@@ -51,4 +52,12 @@ button {
 
 button:hover {
     background-color: #218838;
+}
+
+/* Ensure View Sales button is placed at the bottom */
+body > div {
+    position: left;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
 }
