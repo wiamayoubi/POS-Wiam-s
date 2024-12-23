@@ -113,6 +113,7 @@ function viewSales() {
     
     let salesReport = "Sales Report (End of Day):\n\n";
     
+    // Loop through all sales and display each sale's items and total amount
     sales.forEach(sale => {
         salesReport += `Date: ${sale.date}\n`;
         sale.items.forEach(item => {
@@ -122,4 +123,12 @@ function viewSales() {
     });
     
     alert(salesReport);
+}
+
+// Function to clear all sales from localStorage
+function clearAllSales() {
+    if (confirm("Are you sure you want to delete all sales data? This cannot be undone.")) {
+        localStorage.removeItem('sales');
+        alert("All sales data has been deleted.");
+    }
 }
